@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+class outer
+{public:
+  class inner
+  {
+    int x,y;
+    public:
+    
+    void get()
+    {
+     cin>>x;
+     cin>>y;
+    }
+    void sum()
+    {
+      cout<<x+y;
+    }
+  };
+};
+int main() 
+{
+  outer::inner obj1;
+  obj1.get();
+  obj1.sum();
+	return 0;
+}
