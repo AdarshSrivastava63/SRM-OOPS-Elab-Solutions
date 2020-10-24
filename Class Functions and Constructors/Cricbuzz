@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+class Cricket
+{
+  string pname;
+  int jno;
+  int noi;
+  static int counter;
+  public:
+  Cricket(int n,string r,int p)
+  {
+    jno=n;
+    pname=r;
+    noi=p;
+  }
+  void show()
+  {
+    cout<<"\nJersey Num:"<<jno<<"\nName of the Player:"<<pname<<"\nNo of Innings Played:"<<noi;
+  }
+};
+int main() 
+{
+  
+  int N;
+  string R;
+  int P;
+  cin>>N>>R>>P;
+  Cricket lib1(N,R,P);
+  lib1.show();
+  cin>>N>>R>>P;
+  Cricket lib2=Cricket(N,R,P); 
+  lib2.show();
+  return 0;
+}
